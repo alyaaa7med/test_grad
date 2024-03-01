@@ -62,3 +62,13 @@ class Patient(models.Model):
     birthdate = models.DateField()
 
 
+
+# request_counter_signal = Signal(providing_args['timestamp'])
+
+# def func(request) :
+#     request_counter_signal.send(sender = Post,timestamp='2010-10-1')
+#     return HttpResponse("it is response")
+
+# @reciever(request_counter_signal)
+# def post_counter_signal(sender,**kwargs) :
+#     print (kwargs)
