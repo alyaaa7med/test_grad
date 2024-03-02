@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model 
 from djoser.serializers import UserCreateSerializer 
 from rest_framework import serializers 
-from .models import Doctor , Patient
+from .models import Doctor , Patient , otpcode
 
 User = get_user_model() 
 
@@ -57,3 +57,15 @@ class PatientSerializer(serializers.ModelSerializer):
 
 
     
+class EmailSerializr(serializers.ModelSerializer):
+    
+    class Meta : 
+        model = User
+        fields = ['email']
+
+
+class VerifyOTPSerializer(serializers.ModelSerializer):
+
+    class Meta : 
+        model = otpcode
+        fields  = ['otp']
