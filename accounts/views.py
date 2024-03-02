@@ -60,7 +60,7 @@ def generate_otp_from_email_and_send_email(request):
   
 
 
-@api_view(['POST','PATCH'])
+@api_view(['POST','PUT'])
 
 # pk of user , foreign key in otp , doctor , patient model 
 def verify_code_and_resend(request,pk):
