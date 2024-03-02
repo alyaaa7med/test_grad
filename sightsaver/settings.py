@@ -100,11 +100,11 @@ DJOSER= {
     # 'SEND_ACTIVATION_EMAIL':True,
     # 'ACTIVATION_URL':'activate/{uid}/{token}',
     
-    'SERIALIZERS': { 
-        'user_create': 'accounts.serializers.CreateUserSerializer',  # create user  
-        'user': 'accounts.serializers.CreateUserSerializer',       # update user  
-        'user_delete': "djoser.serializers.UserDeleteSerializer", # delete user      
-    }
+    # 'SERIALIZERS': { 
+    #     'user_create': 'accounts.serializers.CreateUserSerializer',  # create user  
+    #     'user': 'accounts.serializers.CreateUserSerializer',       # update user  
+    #     'user_delete': "djoser.serializers.UserDeleteSerializer", # delete user      
+    # }
 
 
 }

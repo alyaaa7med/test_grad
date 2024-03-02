@@ -38,7 +38,7 @@ class User(AbstractBaseUser,PermissionsMixin) :
     
 
 class otpcode(models.Model): 
-    user = models.ForeignKey(User, on_delete = models.CASCADE)
+    user = models.ForeignKey(User, on_delete = models.CASCADE) # should be cascaded 
     otp=models.CharField(max_length=6, default = secrets.token_hex(3)[:5])
     otp_created_at = models.DateTimeField(auto_now_add = True )
     otp_expired_at = models.DateTimeField(blank= True , null = True) # why ? 

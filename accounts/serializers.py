@@ -41,11 +41,9 @@ class DoctorSerializer(serializers.ModelSerializer):
 
    
     
-
-
 class PatientSerializer(serializers.ModelSerializer):
 
-    user = CreateUserSerializer()  
+    user = UserCreateSerializer()   
 
     class Meta : 
         model = Patient
@@ -55,8 +53,7 @@ class PatientSerializer(serializers.ModelSerializer):
         user_data = validated_data.pop('user') 
         user = User.objects.create(**user_data, role='patient')
         patient = Patient.objects.create(user=user,**validated_data) 
-        return patient 
-
+        return patient
 
 
     
